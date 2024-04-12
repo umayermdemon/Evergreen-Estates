@@ -5,12 +5,12 @@ import {
   Button,
   Menu,
   MenuHandler,
-  Avatar,
   IconButton,
 } from "@material-tailwind/react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaRegCircleUser } from "react-icons/fa6";
 
 function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -23,13 +23,7 @@ function ProfileMenu() {
           color="blue-gray"
           className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
         >
-          <Avatar
-            variant="circular"
-            size="sm"
-            alt="tania andrew"
-            className="border border-gray-900 p-0.5"
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-          />
+         <FaRegCircleUser className="text-4xl" />
           
         </Button>
       </MenuHandler>
@@ -39,12 +33,12 @@ function ProfileMenu() {
 
 function NavList() {
   return (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+    <ul className="mt-2 mb-4  flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavLink>
         <Typography
           variant="small"
           color="gray"
-          className="font-medium text-blue-gray-500"
+          className="font-medium text-white font-rubik text-base"
         >
           Home
         </Typography>
@@ -53,7 +47,7 @@ function NavList() {
         <Typography
           variant="small"
           color="gray"
-          className="font-medium text-blue-gray-500"
+          className="font-medium text-white font-rubik text-base"
         >
           Blog
         </Typography>
@@ -62,7 +56,7 @@ function NavList() {
         <Typography
           variant="small"
           color="gray"
-          className="font-medium text-blue-gray-500"
+          className="font-medium text-white font-rubik text-base"
         >
           About
         </Typography>
@@ -71,7 +65,7 @@ function NavList() {
         <Typography
           variant="small"
           color="gray"
-          className="font-medium text-blue-gray-500"
+          className="font-medium text-white font-rubik text-base"
         >
           Contact
         </Typography>
@@ -81,7 +75,7 @@ function NavList() {
         <Typography
           variant="small"
           color="gray"
-          className="font-medium text-blue-gray-500"
+          className="font-medium text-white font-rubik text-base"
         >
           Update Profile
         </Typography>
@@ -102,9 +96,9 @@ const NavBar = () => {
     );
   }, []);
   return (
-    <div>
-      <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6">
-        <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
+    <div className="bg-[#0B2B4F] sticky top-0 z-10 p-2">
+      <Navbar className=" mx-auto max-w-7xl bg-[#0B2B4F] border-none p-2  lg:pl-4">
+        <div className="relative mx-auto flex items-center justify-between text-white">
           <IconButton
             size="sm"
             color="blue-gray"
@@ -118,9 +112,9 @@ const NavBar = () => {
           <Typography
             as="a"
             href="#"
-            className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+            className="mr-4 ml-2 font-rubik cursor-pointer py-1.5 font-bold text-2xl text-white "
           >
-            EverGreen
+            Ever<span className="text-[#5BA600]">Green</span> 
           </Typography>
           <div className="hidden lg:block">
             <NavList />
@@ -128,7 +122,7 @@ const NavBar = () => {
 
           <div className="flex">
             <Button size="sm" variant="text">
-              <span>Log In</span>
+              <span className="text-white text-sm">Log In</span>
             </Button>
             <ProfileMenu />
           </div>
