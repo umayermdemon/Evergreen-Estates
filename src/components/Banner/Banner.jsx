@@ -13,7 +13,7 @@ const Banner = () => {
             <span
               key={i}
               className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                activeIndex === i ? "w-8 bg-blue-900" : "w-4 bg-white/50"
               }`}
               onClick={() => setActiveIndex(i)}
             />
@@ -22,17 +22,22 @@ const Banner = () => {
       )}
     >
       <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        src="https://i.ibb.co/H2VJynz/a054ac26.jpg"
         alt="image 1"
         className=" w-full h-[835px] object-cover"
       />
       <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        src="https://i.ibb.co/2PqCKC9/seaside-villas.jpg"
         alt="image 2"
         className=" w-full h-[835px] object-cover"
       />
       <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+        src="https://i.ibb.co/KF6G3Tx/mountaine-Chalet.jpg"
+        alt="image 3"
+        className="  w-full h-[835px] object-cover"
+      />
+      <img
+        src="https://i.ibb.co/cJZQNmC/urban-boutique-hotel.jpg"
         alt="image 3"
         className="  w-full h-[835px] object-cover"
       />
