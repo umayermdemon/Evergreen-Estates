@@ -34,7 +34,7 @@ function ProfileMenu() {
 function NavList() {
   return (
     <ul className="mt-2 mb-4  flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-      <NavLink>
+      <NavLink to="/">
         <Typography
           variant="small"
           color="gray"
@@ -43,7 +43,7 @@ function NavList() {
           Home
         </Typography>
       </NavLink>
-      <NavLink>
+      <NavLink to="/blog">
         <Typography
           variant="small"
           color="gray"
@@ -52,7 +52,7 @@ function NavList() {
           Blog
         </Typography>
       </NavLink>
-      <NavLink>
+      <NavLink to="/about">
         <Typography
           variant="small"
           color="gray"
@@ -61,7 +61,7 @@ function NavList() {
           About
         </Typography>
       </NavLink>
-      <NavLink>
+      <NavLink to="/contact">
         <Typography
           variant="small"
           color="gray"
@@ -70,7 +70,6 @@ function NavList() {
           Contact
         </Typography>
       </NavLink>
-
       <NavLink>
         <Typography
           variant="small"

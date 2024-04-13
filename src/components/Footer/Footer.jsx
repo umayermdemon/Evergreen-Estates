@@ -1,5 +1,5 @@
 import { Button, Typography } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+
 const LINKS = [
   {
     title: "Product",
@@ -27,11 +27,30 @@ const Footer = () => {
               <Typography variant="h3" className="mb-6 text-white font-rubik">
                 Ever<span className="text-[#5BA600]">Green</span>
               </Typography>
-              <Typography variant="h6" className="mb-4 text-white text-justify font-rubik">
-              Find Your Ideal Escape: Browse through our diverse range of luxury accommodations, from serene beach resorts to vibrant city hotels. Immerse yourself in comfort and style, complemented by impeccable service and breathtaking locations. Whether you are seeking a romantic retreat, a family adventure, or a business trip, we have the perfect destination for you.Your dream getaway starts here.
+              <Typography
+                variant="h6"
+                className="mb-4 text-white text-justify font-rubik"
+              >
+                Find Your Ideal Escape: Browse through our diverse range of
+                luxury accommodations, from serene beach resorts to vibrant city
+                hotels. Immerse yourself in comfort and style, complemented by
+                impeccable service and breathtaking locations. Whether you are
+                seeking a romantic retreat, a family adventure, or a business
+                trip, we have the perfect destination for you.Your dream getaway
+                starts here.
               </Typography>
               <div>
-              <Link to="/"><Button className="bg-[#5BA600] font-rubik" size="lg">More</Button></Link>
+            
+                  
+                <Typography
+                  as="a"
+                  href="#"
+                 
+                >
+                 <Button className="bg-[#5BA600] font-rubik" size="lg">
+                    More
+                  </Button>
+                </Typography>
               </div>
             </div>
             <div className="grid grid-cols-3 justify-between gap-4 md:ml-8 lg:ml-12 mt-4 md:mt-12 lg:mt-12">
@@ -66,8 +85,8 @@ const Footer = () => {
               className="mb-4 text-center font-normal text-white font-rubik md:mb-0"
             >
               &copy; {currentYear}{" "}
-              <a href="https://material-tailwind.com/">EverGreen</a>.
-              All Rights Reserved.
+              <a href="https://material-tailwind.com/">EverGreen</a>. All Rights
+              Reserved.
             </Typography>
             <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
               <Typography
