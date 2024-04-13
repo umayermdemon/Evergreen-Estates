@@ -31,7 +31,7 @@ const Banner = () => {
               color="white"
               className="mb-4 md:mb-4 lg:mb-12 opacity-80 text-xs md:text-base lg:text-lg"
             >
-              No matter what the weather, no matter what the situation we are in, if we have the right perspective in life, life will always be beautiful!
+              Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
             <div className="flex justify-center gap-2 ">
               <Button size="lg" color="white" className="hidden lg:block">
@@ -71,7 +71,7 @@ const Banner = () => {
               color="white"
               className="mb-4 md:mb-4 lg:mb-12 opacity-80 text-xs md:text-base lg:text-lg"
             >
-              No matter what the weather, no matter what the situation we are in, if we have the right perspective in life, life will always be beautiful!
+              Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
             <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
@@ -111,7 +111,7 @@ const Banner = () => {
               color="white"
               className="mb-4 md:mb-4 lg:mb-12 opacity-80 text-xs md:text-base lg:text-lg"
             >
-              No matter what the weather, no matter what the situation we are in, if we have the right perspective in life, life will always be beautiful!
+              Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
             <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
