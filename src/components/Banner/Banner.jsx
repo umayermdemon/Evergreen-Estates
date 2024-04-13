@@ -24,22 +24,22 @@ const Banner = () => {
       <img
         src="https://i.ibb.co/H2VJynz/a054ac26.jpg"
         alt="image 1"
-        className=" w-full h-[835px] object-cover"
+        className=" w-full h-[200px] lg:h-[835px] object-cover"
       />
       <img
         src="https://i.ibb.co/2PqCKC9/seaside-villas.jpg"
         alt="image 2"
-        className=" w-full h-[835px] object-cover"
+        className=" w-full h-[200px] lg:h-[835px] object-cover"
       />
       <img
         src="https://i.ibb.co/KF6G3Tx/mountaine-Chalet.jpg"
         alt="image 3"
-        className="  w-full h-[835px] object-cover"
+        className="  w-full h-[200px] lg:h-[835px] object-cover"
       />
       <img
         src="https://i.ibb.co/cJZQNmC/urban-boutique-hotel.jpg"
         alt="image 3"
-        className="  w-full h-[835px] object-cover"
+        className="  w-full h-[200px] lg:h-[835px] object-cover"
       />
     </Carousel>
     </div>

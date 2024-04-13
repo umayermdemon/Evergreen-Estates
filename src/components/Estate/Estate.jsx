@@ -15,7 +15,7 @@ const Estate = ({ estate }) => {
   const { image, estate_title, short_description,rating,price,bedrooms,location,status } = estate || {};
   return (
     <div >
-      <Card className="w-full  max-w-[26rem] shadow-lg">
+      <Card className="w-full flex flex-col  max-w-[26rem] shadow-lg">
         <CardHeader floated={false}  color="blue-gray">
           <img src={image} className="h-56 w-full" />
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -38,9 +38,9 @@ const Estate = ({ estate }) => {
             <Button variant="gradient" color="blue" className="text-white font-rubik">For {status}</Button>
           </div>
         </CardHeader>
-        <CardBody>
+        <CardBody >
           <div className="mb-2 flex items-center justify-between">
-            <Typography variant="h5" color="blue-gray" className="font-bold font-rubik">
+            <Typography   color="blue-gray" className="font-bold font-rubik text-xl md:text-lg lg:text-xl">
               {estate_title}
             </Typography>
             <Typography
@@ -63,12 +63,12 @@ const Estate = ({ estate }) => {
             </Typography>
           </div>
            
-            <Typography color="gray" className="text-justify font-rubik text-base">
+            <Typography color="gray" className="text-justify flex-grow font-rubik text-base">
              { short_description}
             </Typography>
           
         
-          <div className="group mt-6 inline-flex flex-wrap items-center gap-4">
+          <div className="group mt-6 inline-flex flex-wrap items-center md:gap-2 lg:gap-4">
             <Tooltip content={price}>
               <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                 <svg

@@ -10,7 +10,7 @@
     "location": "Tropical Island, Caribbean",
     "facilities": ["Private beach access", "Swimming pool", "Spa", "Fitness center", "Restaurants", "Water sports activities"],
     "image": "https://i.ibb.co/R7N4BSR/beach-front.jpg",
-    "short_description": "Experience ultimate luxury and relaxation at our beachfront resort. Each suite offers stunning ocean views and modern amenities. Indulge in gourmet dining and recreational activities. Perfect for romantic escapes or family vacations.",
+    "short_description": "Experience ultimate luxury and relaxation at our beachfront resort. Each suite offers stunning ocean views and modern amenities. Indulge in gourmet dining and recreational activities. Perfect for romantic escapes.",
     "rating": 4.8,
     "bedrooms": "2 bedrooms"
   },
@@ -70,7 +70,7 @@
     "location": "Coastal Village, Europe",
     "facilities": ["Ocean views", "Terrace", "Complimentary breakfast", "Free parking", "Bicycle rental", "Beach access"],
     "image": "https://i.ibb.co/vkGfJDM/coastel-retreat.jpg",
-    "short_description": "Experience coastal living at its finest with a stay at our charming guesthouse retreat. Bright rooms with modern amenities offer panoramic ocean views. Perfect for beach lovers.",
+    "short_description": "Experience coastal living at its finest with a stay at our charming guesthouse retreat. Bright rooms with modern panoramic ocean views. Perfect for beach lovers.",
     "rating": 4.9,
     "bedrooms": "4 bedrooms"
   },
@@ -131,7 +131,7 @@
     "location": "Downtown Arts District, USA",
     "facilities": ["Rooftop bar", "Café", "Fitness center", "Concierge service", "Valet parking", "Meeting rooms"],
     "image": "https://i.ibb.co/cJZQNmC/urban-boutique-hotel.jpg",
-    "short_description": "Discover urban sophistication at our boutique hotel in the heart of the city. Chic rooms with modern amenities offer a stylish retreat. Perfect for exploring the vibrant neighborhood.",
+    "short_description": "Discover urban sophistication at our boutique hotel in the heart of the city. Chic rooms with modern amenities offer. Perfect for exploring the vibrant neighborhood.",
     "rating": 4.6,
     "bedrooms": "2 bedrooms"
   },
