@@ -5,6 +5,7 @@ import Home from "../components/Home/Home";
 import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 
 
@@ -30,6 +31,10 @@ import Contact from "../components/Contact/Contact";
           path:'/contact',
           element:<Contact/>
         },
+        {
+          path:'/updateProfile',
+          element:<UpdateProfile/>
+        }
       ]
     }
 

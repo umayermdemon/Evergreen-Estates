@@ -34,47 +34,38 @@ function ProfileMenu() {
 function NavList() {
   return (
     <ul className="mt-2 mb-4  flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-      <NavLink to="/">
+      <NavLink to="/" 
+       className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4':"flex text-sm lg:text-base items-center gap-2  text-white pr-2 lg:pr-4"}>
         <Typography
-          variant="small"
-          color="gray"
-          className="font-medium text-white font-rubik text-base"
+          className="font-medium  font-rubik text-base"
         >
           Home
         </Typography>
       </NavLink>
-      <NavLink to="/blog">
+      <NavLink to="/blog" className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4':"flex text-sm lg:text-base items-center gap-2  text-white pr-2 lg:pr-4"}>
         <Typography
-          variant="small"
-          color="gray"
-          className="font-medium text-white font-rubik text-base"
+          className="font-medium  font-rubik text-base"
         >
           Blog
         </Typography>
       </NavLink>
-      <NavLink to="/about">
+      <NavLink to="/about" className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4':"flex text-sm lg:text-base items-center gap-2  text-white pr-2 lg:pr-4"}>
         <Typography
-          variant="small"
-          color="gray"
-          className="font-medium text-white font-rubik text-base"
+          className="font-medium  font-rubik text-base"
         >
           About
         </Typography>
       </NavLink>
-      <NavLink to="/contact">
+      <NavLink to="/contact" className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4':"flex text-sm lg:text-base items-center gap-2  text-white pr-2 lg:pr-4"}>
         <Typography
-          variant="small"
-          color="gray"
-          className="font-medium text-white font-rubik text-base"
+          className="font-medium  font-rubik text-base"
         >
           Contact
         </Typography>
       </NavLink>
-      <NavLink>
+      <NavLink to='/updateProfile' className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4':"flex text-sm lg:text-base items-center gap-2  text-white pr-2 lg:pr-4"}>
         <Typography
-          variant="small"
-          color="gray"
-          className="font-medium text-white font-rubik text-base"
+          className="font-medium  font-rubik text-base"
         >
           Update Profile
         </Typography>
