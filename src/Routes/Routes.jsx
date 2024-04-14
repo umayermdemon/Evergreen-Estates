@@ -7,6 +7,7 @@ import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import DetailsEstate from "../components/DetailsEstate/DetailsEstate";
+import Login from "../components/Login/Login";
 
 
 
@@ -40,6 +41,10 @@ import DetailsEstate from "../components/DetailsEstate/DetailsEstate";
           path:'/detailsEstate/:id',
           element:<DetailsEstate/>,
           loader: ()=> fetch('/data.json')
+        },
+        {
+          path:'/login',
+          element:<Login/>
         }
       ]
     }
