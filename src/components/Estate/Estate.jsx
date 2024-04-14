@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
+import 'animate.css';
 import {
   Button,
   Card,
@@ -23,7 +24,7 @@ const Estate = ({ estate }) => {
             size="sm"
             color="red"
             variant="text"
-            className="!absolute top-4 right-4 rounded-full"
+            className="!absolute top-4 right-4 rounded-full animate__animated animate__fadeInRight animate__repeat-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

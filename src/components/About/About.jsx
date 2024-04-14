@@ -1,12 +1,10 @@
-
-
-
+import 'animate.css';
 
 const About = () => {
   return (
     <div>
       <div className="bg-gradient-to-r from-[#269064] to-[#30416D] ... text-center p-12 space-y-4">
-        <h2 className="text-white text-5xl font-rubik font-bold">About</h2>
+        <h2 className="text-white text-5xl font-rubik font-bold animate__animated animate__bounce ">About</h2>
         <h4 className="font-rubik font-semibold text-black">
           About our company
         </h4>
