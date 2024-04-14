@@ -70,6 +70,13 @@ function NavList() {
           Update Profile
         </Typography>
       </NavLink>
+      <NavLink  className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4':"flex text-sm lg:text-base items-center gap-2  text-white pr-2 lg:pr-4"}>
+        <Typography
+          className="font-medium  font-rubik text-base"
+        >
+          Profile
+        </Typography>
+      </NavLink>
     </ul>
   );
 }
