@@ -6,6 +6,7 @@ import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import DetailsEstate from "../components/DetailsEstate/DetailsEstate";
 
 
 
@@ -34,6 +35,11 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
         {
           path:'/updateProfile',
           element:<UpdateProfile/>
+        },
+        {
+          path:'/detailsEstate/:id',
+          element:<DetailsEstate/>,
+          loader: ()=> fetch('/data.json')
         }
       ]
     }

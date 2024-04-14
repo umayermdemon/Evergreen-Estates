@@ -3,15 +3,15 @@ import { Button, Typography } from "@material-tailwind/react";
 const LINKS = [
   {
     title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
+    items: ["Overview", "Features"],
   },
   {
     title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
+    items: ["About us", "Careers"],
   },
   {
     title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: ["Blog", "Newsletter"]
   },
 ];
 
@@ -33,10 +33,7 @@ const Footer = () => {
               >
                 Find Your Ideal Escape: Browse through our diverse range of
                 luxury accommodations, from serene beach resorts to vibrant city
-                hotels. Immerse yourself in comfort and style, complemented by
-                impeccable service and breathtaking locations. Whether you are
-                seeking a romantic retreat, a family adventure, or a business
-                trip, we have the perfect destination for you.Your dream getaway
+                hotels.Your dream getaway
                 starts here.
               </Typography>
               <div>
@@ -59,7 +56,7 @@ const Footer = () => {
                   <Typography
                     variant="small"
                     color="blue-gray"
-                    className="mb-3 font-medium  text-white"
+                    className="mb-3 font-bold text-lg  text-white"
                   >
                     {title}
                   </Typography>

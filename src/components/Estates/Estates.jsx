@@ -5,7 +5,6 @@ import Estate from "../Estate/Estate";
 
 const Estates = () => {
   const {estates}=useFetchData();
-  console.log(estates)
   return (
     <div  className="font-rubik my-4 md:my-8 lg:my-12">
       <div className="max-w-[700px] lg:max-w-[750px] mb-2 mx-2 lg:mb-4 lg:mx-auto text-center space-y-2 lg:space-y-4">

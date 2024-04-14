@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
-import 'animate.css';
+import "animate.css";
 import {
   Button,
   Card,
@@ -11,13 +11,24 @@ import {
   Tooltip,
   Typography,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const Estate = ({ estate }) => {
-  const { image, estate_title, short_description,rating,price,bedrooms,location,status } = estate || {};
+  const {
+    id,
+    image,
+    estate_title,
+    short_description,
+    rating,
+    price,
+    bedrooms,
+    location,
+    status,
+  } = estate || {};
   return (
-    <div >
+    <div>
       <Card className="w-full flex flex-col  max-w-[26rem] shadow-lg">
-        <CardHeader floated={false}  color="blue-gray">
+        <CardHeader floated={false} color="blue-gray">
           <img src={image} className="h-56 w-full" />
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
           <IconButton
@@ -36,12 +47,21 @@ const Estate = ({ estate }) => {
             </svg>
           </IconButton>
           <div className="!absolute bottom-2 right-2 rounded-full">
-            <Button variant="gradient" color="blue" className="text-white font-rubik">For {status}</Button>
+            <Button
+              variant="gradient"
+              color="blue"
+              className="text-white font-rubik"
+            >
+              For {status}
+            </Button>
           </div>
         </CardHeader>
-        <CardBody >
+        <CardBody>
           <div className="mb-2 flex items-center justify-between">
-            <Typography   color="blue-gray" className="font-bold font-rubik text-xl md:text-lg lg:text-xl">
+            <Typography
+              color="blue-gray"
+              className="font-bold font-rubik text-xl md:text-lg lg:text-xl"
+            >
               {estate_title}
             </Typography>
             <Typography
@@ -63,12 +83,14 @@ const Estate = ({ estate }) => {
               {rating}
             </Typography>
           </div>
-           
-            <Typography color="gray" className="text-justify flex-grow font-rubik text-base">
-             { short_description}
-            </Typography>
-          
-        
+
+          <Typography
+            color="gray"
+            className="text-justify flex-grow font-rubik text-base"
+          >
+            {short_description}
+          </Typography>
+
           <div className="group mt-6 inline-flex flex-wrap items-center md:gap-2 lg:gap-4">
             <Tooltip content={price}>
               <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
@@ -104,7 +126,7 @@ const Estate = ({ estate }) => {
                 </svg>
               </span>
             </Tooltip>
-            <Tooltip content={ bedrooms}>
+            <Tooltip content={bedrooms}>
               <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,15 +174,21 @@ const Estate = ({ estate }) => {
             </Tooltip>
             <Tooltip content={location}>
               <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
-              <IoLocationOutline />
+                <IoLocationOutline />
               </span>
             </Tooltip>
           </div>
         </CardBody>
         <CardFooter className="pt-3">
-          <Button size="lg" className="bg-[#0B2B4F] font-rubik" fullWidth={true}>
-          View Property
-          </Button>
+          <Link to={`/detailsEstate/${id}`}>
+            <Button
+              size="lg"
+              className="bg-[#0B2B4F] font-rubik"
+              fullWidth={true}
+            >
+              View Property
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>
