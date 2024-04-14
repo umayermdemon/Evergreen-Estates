@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaRegCircleUser } from "react-icons/fa6";
 
 function ProfileMenu() {
@@ -108,13 +108,15 @@ const NavBar = () => {
             <Bars2Icon className="h-6 w-6" />
           </IconButton>
 
-          <Typography
+         <Link to='/'>
+         <Typography
             as="a"
             href="#"
             className="mr-4 ml-2 font-rubik cursor-pointer py-1.5 font-bold text-2xl text-white "
           >
             Ever<span className="text-[#5BA600]">Green</span> 
           </Typography>
+         </Link>
           <div className="hidden lg:block">
             <NavList />
           </div>

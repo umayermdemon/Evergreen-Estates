@@ -17,11 +17,11 @@ const AboutSection = () => {
           WELCOME TO OUR Real Estate COMPANY
         </p>
       </div>
-      <div className=" flex flex-row gap-12 pt-4">
-        <div>
+      <div className=" flex flex-col lg:flex-row gap-12 pt-4">
+        <div className="mx-2 md:mx-4 lg:mx-auto">
           <img src="https://i.ibb.co/3MhGHQR/modern-city.jpg" alt="" className="rounded-xl" />
         </div>
-        <div>
+        <div className="mx-2 md:mx-4 lg:mx-auto">
           <Timeline>
             <TimelineItem>
               <TimelineConnector />
