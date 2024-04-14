@@ -38,8 +38,8 @@ const Contact = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik font-bold text-[#30416D]">
             Contact us <br /> live
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 ">
-            <div className="flex flex-col md:flex-row lg:flex-col gap-8 md:gap-16 lg:gap-8 col-span-1 pt-8 pb-8 lg:pt-16 justify-center lg:justify-start items-center lg:items-start text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-5 ">
+            <div className="flex flex-col md:flex-row lg:flex-col gap-8 md:gap-16 lg:gap-8 col-span-2 pt-8 pb-8 lg:pt-16 justify-center lg:justify-start items-center lg:items-start text-left">
               <div className="flex flex-col gap-2">
                 <div className="flex flex-row items-center gap-2 mb-2">
                   <IoLocation className="text-[#30416D] text-2xl" />
@@ -73,17 +73,17 @@ const Contact = () => {
                 <h4>666 35874692050</h4>
               </div>
             </div>
-            <div className="col-span-1 mx-2 md:mx-12" >
+            <div className="col-span-3 mx-2 md:mx-12" >
               <Typography variant="h3" color="blue-gray">
                 Have a question
               </Typography>
-              <div className="mt-4">
+              <div className="mt-4 lg:w-[700px]">
                 <Card shadow={false} className=" bg-gray-100 p-4 lg:p-8">
                   <Typography variant="h4" color="blue-gray">
                     Send Us A email
                   </Typography>
 
-                  <form className="mt-8  ml-6 md:ml-20 lg:ml-16 flex flex-col gap-6 items-center justify-center  sm:w-96">
+                  <form className="mt-8  ml-6 md:ml-20 lg:ml-2 flex flex-col gap-6 items-center justify-center lg:w-[600px] md:w-[500px] sm:w-96">
                     <Input label="Name" variant="standard" required />
 
                     <Input
