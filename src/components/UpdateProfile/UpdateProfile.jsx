@@ -4,7 +4,7 @@ import {  Card, Input, Typography } from "@material-tailwind/react";
 const UpdateProfile = () => {
   return (
     <div>
-      <Card color="transparent" shadow={false} className="max-w-7xl mx-auto min-h-[calc(100vh-431px)] bg-gray-200 mt-2 flex justify-center items-center">
+      <Card color="transparent" shadow={false} className="max-w-7xl mx-auto min-h-[calc(100vh-425px)] bg-gray-200 mt-2 flex justify-center items-center">
       <Typography variant="h4" color="blue-gray" className="text-xl md:text-2xl lg:text-3xl font-rubik font-bold text-[#30416D]">
         Update Your Profile
       </Typography>

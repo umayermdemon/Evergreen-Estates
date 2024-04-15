@@ -1,14 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import {  Card, Input, Typography } from "@material-tailwind/react";
+import {  Card, Input,  Typography } from "@material-tailwind/react";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
   const {signInUser}=useContext(AuthContext)
+
+  const location=useLocation()
+  const navigate=useNavigate()
+  
   const [showPassword, setShowPassword]=useState(false)
 
   const handleLogin = (e) => {
@@ -19,9 +24,18 @@ const Login = () => {
     console.log(email, password);
 
     signInUser(email,password)
-    .then()
+    .then(result=>{
+      console.log(result.user)
+      toast.success("Login Success")
+      navigate(location?.state?location.state:"/")
+    }
+    )
     .catch(error=>{
      console.error(error)
+   
+   toast.warn("Please provide valid email & password")
+    
+     
     })
   };
   return (

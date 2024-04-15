@@ -1,13 +1,15 @@
 import { Card, Checkbox, Input, Typography } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 import { toast } from "react-toastify";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
+  const navigate=useNavigate()
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -40,12 +42,23 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Register Success")
+        toast.success("Register Success");
+        updateProfile(result.user,{
+          displayName:name, photoURL:photoUrl
+        })
+        .then(
+            navigate('/')
+        )
+        .catch(error=>{
+          console.error(error)
+        })
       })
       .catch((error) => {
         console.error(error);
         toast.warn("You are already registered. Please Login")
       });
+
+      
       
   };
 
