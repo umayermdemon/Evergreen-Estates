@@ -8,6 +8,8 @@ import Contact from "../components/Contact/Contact";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import DetailsEstate from "../components/DetailsEstate/DetailsEstate";
 import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
+import Profile from "../components/Profile/Profile";
 
 
 
@@ -45,7 +47,15 @@ import Login from "../components/Login/Login";
         {
           path:'/login',
           element:<Login/>
-        }
+        },
+        {
+          path:'/register',
+          element:<Register/>
+        },
+        {
+          path:'/profile',
+          element:<Profile/>
+        },
       ]
     }
 

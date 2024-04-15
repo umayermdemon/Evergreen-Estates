@@ -1,4 +1,4 @@
-import { Button, Card, Input, Typography } from "@material-tailwind/react";
+import {  Card, Input, Typography } from "@material-tailwind/react";
 
 
 const UpdateProfile = () => {
@@ -32,9 +32,9 @@ const UpdateProfile = () => {
           />
         </div>
         
-        <Button className="mt-6 bg-gradient-to-r from-[#269064] to-[#30416D] ... flex mx-auto" >
+        <button className="mt-2 py-2 px-4 text-white rounded-lg  bg-gradient-to-r from-[#269064] to-[#30416D] ... flex mx-auto" >
           Update
-        </Button>
+        </button>
        
       </form>
     </Card>

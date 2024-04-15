@@ -29,7 +29,7 @@ const DetailsEstate = () => {
   return (
     <div>
      
-     <Card className=" min-h-[calc(100vh-433px)] max-w-6xl mx-auto flex-col lg:flex-row  mt-4">
+     <Card className=" min-h-[calc(100vh-431px)]  max-w-6xl mx-auto flex-col lg:flex-row  mt-2">
         <CardHeader
           shadow={false}
           floated={false}

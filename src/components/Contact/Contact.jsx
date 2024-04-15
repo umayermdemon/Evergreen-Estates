@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   Input,
   Textarea,
@@ -107,9 +106,9 @@ const Contact = () => {
                       label="Your Message"
                     />
 
-                    <Button className="mt-2 bg-gradient-to-r from-[#269064] to-[#30416D] ...">
+                    <button className="mt-2 py-2 px-4 text-white rounded-lg  bg-gradient-to-r from-[#269064] to-[#30416D] ... flex mx-auto">
                       Submit
-                    </Button>
+                    </button>
                   </form>
                 </Card>
               </div>

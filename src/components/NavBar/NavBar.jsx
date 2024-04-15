@@ -8,9 +8,10 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { AuthContext } from "../../Context/AuthProvider";
 
 function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -93,7 +94,7 @@ function NavList() {
           Update Profile
         </Typography>
       </NavLink>
-      <NavLink
+      <NavLink to='/profile'
         className={({ isActive }) =>
           isActive
             ? "text-[#23BE0A] border border-[#5BA600] p-2 lg:p-3 rounded-xl font-medium text-sm lg:text-base pr-2 lg:pr-4"
@@ -109,7 +110,12 @@ function NavList() {
 }
 
 const NavBar = () => {
+  const {user, logOut}=useContext(AuthContext)
   const [isNavOpen, setIsNavOpen] = React.useState(false);
+
+  const handleLogout=()=>{
+    logOut()
+  }
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
@@ -146,11 +152,18 @@ const NavBar = () => {
           </div>
 
           <div className="flex">
-            <Link to='/login'>
-              <Button size="sm" variant="text">
-                <span className="text-white text-sm">Log In</span>
-              </Button>
-            </Link>
+            {
+             user ?
+             <Button onClick={handleLogout} size="sm" variant="text">
+               <span className="text-white text-sm">Log Out</span>
+             </Button>
+             :
+             <Link to='/login'>
+             <Button size="sm" variant="text">
+               <span className="text-white text-sm">Log In</span>
+             </Button>
+           </Link>
+            }
             <ProfileMenu />
           </div>
         </div>
