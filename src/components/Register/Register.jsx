@@ -1,4 +1,4 @@
-import { Card, Checkbox, Input, Typography } from "@material-tailwind/react";
+import {  Card, Checkbox, Input, Typography } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,9 +6,10 @@ import { AuthContext } from "../../Context/AuthProvider";
 import { toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
 
+
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser } = useContext(AuthContext);
+  const { createUser} = useContext(AuthContext);
   const navigate=useNavigate()
 
   const handleRegister = (e) => {
@@ -22,27 +23,28 @@ const Register = () => {
     console.log(name, email, password, photoUrl, condition);
 
     if (!condition) {
-      toast.warn("Please check terms & condition")
+      toast.warn("Please check the terms and conditions.")
       return;
     } 
     else if (password.length < 6) {
-      toast.warn("Password at least 6 characters")
+      toast.warn("Invalid password format")
       return;
     }
     else if (!/[A-Z]/.test(password)) {
-      toast.warn("Password at least 1 Uppercase")
+      toast.warn("Invalid password format")
       return;
     } else if (!/[a-z]/.test(password)) {
-      toast.warn("Password at least 1 Lowercase")
+      toast.warn("Invalid password format")
       return;
     }
+
       
    
      
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Register Success");
+        toast.success("Registration successful!");
         updateProfile(result.user,{
           displayName:name, photoURL:photoUrl
         })
@@ -63,21 +65,23 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="my-2">
+       
       <Card
         color="transparent"
         shadow={false}
-        className="max-w-7xl mx-auto min-h-[calc(100vh-429px)] bg-gray-200 mt-3 flex justify-center items-center"
+        
+        className="max-w-7xl mx-auto min-h-[calc(100vh-425px)] px-24 bg-gradient-to-r from-[#f6d5f7]  to-[#fbe9d7]  mt-2 flex justify-center items-center"
       >
         <h2 className="text-xl md:text-2xl lg:text-3xl font-rubik font-bold text-[#30416D]">
           Register
         </h2>
-        <h4 className="mt-2 font-normal text-black">
+        <h4 className="mt-1 font-normal text-black">
           Nice to meet you! Enter your details to register.
         </h4>
         <form
           onSubmit={handleRegister}
-          className="mt-4 mb-2 w-80 max-w-screen-lg sm:w-96"
+          className="mt-2 mb-1 w-80 max-w-screen-lg sm:w-96"
         >
           <div className="mb-1 flex flex-col gap-6">
             <Input
@@ -118,6 +122,7 @@ const Register = () => {
               >
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>
+              <p className="text-[11.5px] text-red-400 mt-2">**Password must contain at least 6 characters & 1 uppercase, 1 lowercase.</p>
             </div>
           </div>
           <Checkbox
@@ -144,7 +149,7 @@ const Register = () => {
               Register
             </button>
           </div>
-          <Typography color="gray" className="mt-4 text-center font-normal">
+          <Typography color="gray" className="mt-3 text-center font-normal">
             Already have an account?{" "}
             <Link to="/login">
               <span className="font-medium text-blue-900">Login</span>
@@ -152,6 +157,9 @@ const Register = () => {
           </Typography>
         </form>
       </Card>
+      
+    
+     
     </div>
   );
 };
