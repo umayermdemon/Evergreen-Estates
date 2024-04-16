@@ -10,6 +10,7 @@ import {
   MenuList,
   Avatar,
   Tooltip,
+  Spinner,
 } from "@material-tailwind/react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import React, { useContext } from "react";
@@ -18,9 +19,10 @@ import { AuthContext } from "../../Context/AuthProvider";
 import userImg from '/user.png'
 
 function ProfileMenu() {
-  const { logOut,user } = useContext(AuthContext);
+  const { logOut,user} = useContext(AuthContext);
   console.log(user)
-  const navigate=useNavigate()
+  const navigate=useNavigate();
+  
   const {displayName,photoURL}=user
   
   const handleLogout = () => {
@@ -159,6 +161,8 @@ function ProfileMenu() {
 }
 
 function NavList() {
+  const {user}=useContext(AuthContext);
+  
   return (
     <ul className="mt-2 mb-4  flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavLink
@@ -173,7 +177,8 @@ function NavList() {
           Home
         </Typography>
       </NavLink>
-      <NavLink
+      {
+        user && <NavLink
         to="/blog"
         className={({ isActive }) =>
           isActive
@@ -185,6 +190,7 @@ function NavList() {
           Blog
         </Typography>
       </NavLink>
+      }
       <NavLink
         to="/about"
         className={({ isActive }) =>
@@ -214,8 +220,10 @@ function NavList() {
 }
 
 const NavBar = () => {
+  const { user,loader } = useContext(AuthContext);
   const [isNavOpen, setIsNavOpen] = React.useState(false);
-  const { user } = useContext(AuthContext);
+  
+  
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
@@ -225,6 +233,9 @@ const NavBar = () => {
       () => window.innerWidth >= 960 && setIsNavOpen(false)
     );
   }, []);
+  if(loader){
+    return <Spinner className="max-w-7xl mx-auto mt-0 lg:mt-8 h-12 w-12 "/>
+  }
   
   
   return (

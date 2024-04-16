@@ -26,7 +26,7 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
           path:'/blog',
-          element:<Blog/>
+          element:<PrivateRoute><Blog/></PrivateRoute>
         },
         {
           path:'/about',
