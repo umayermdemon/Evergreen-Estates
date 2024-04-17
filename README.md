@@ -1,8 +1,29 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# EverGreen
+![photo](https://i.ibb.co/cQx5PdJ/Screenshot-2024-04-17-145700.png)
 
-Currently, two official plugins are available:
+Welcome to Evergreen Real Estate, your destination for sustainable living and eco-friendly properties! Evergreen is a one-of-a-kind real estate platform dedicated to connecting environmentally conscious buyers and sellers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# About EverGreen
+Evergreen is more than just a real estate website—it's a community committed to promoting sustainable living and green architecture. Our platform showcases a curated selection of properties that prioritize environmental sustainability, featuring eco-friendly homes, green developments, and nature-inspired living spaces.
+## 🔗 Live link
+### Click here for the live link: https://evergreen-a9.web.app/
+
+# Features and Characteristics
+- **Sustainable Listings:**  Explore a diverse range of properties designed with eco-friendly features and green technologies.
+- **Interactive Maps:** Visualize property locations and nearby green spaces with interactive maps.
+- **Personalized Recommendations:** Receive tailored property recommendations based on your sustainability preferences.
+- **Expert Guidance:** Connect with experienced real estate agents and sustainability experts who understand your unique needs.
+- **Virtual Tours:** Take virtual tours of properties to experience their eco-friendly features firsthand.
+- **Educational Resources:** Stay informed with articles, guides, and tips on sustainable living and green real estate.
+- **Seamless Transactions:** Enjoy secure and transparent transactions for buying, selling, and renting properties.
+
+
+
+##  Uses Npm Package
+
+- [AOS Package](https://michalsnik.github.io/aos/)
+- [Animate.css](https://animate.style/)
+- [React-leaflet](https://react-leaflet.js.org/)
+- [Swiper-slider](https://swiperjs.com/)
+

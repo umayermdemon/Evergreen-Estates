@@ -1,4 +1,6 @@
 import {  Button, Carousel, Typography } from "@material-tailwind/react";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Banner = () => {
   return (
@@ -114,9 +116,10 @@ const Banner = () => {
               Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
             <div className="flex justify-center gap-2">
+              <Link to='#estates'>
               <Button size="lg" color="white">
                 Explore
-              </Button>
+              </Button></Link>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>

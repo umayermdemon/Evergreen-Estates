@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 import { toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -66,6 +67,9 @@ const Register = () => {
 
   return (
     <div className="my-2">
+      <Helmet>
+        <title>EverGreen | Register</title>
+      </Helmet>
        
       <Card
         color="transparent"

@@ -7,6 +7,8 @@ import {
 } from "@material-tailwind/react";
 import { useContext } from "react";
 import { AuthContext } from "../../Context/AuthProvider";
+import userImg from '/user.png'
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const { user, loader } = useContext(AuthContext);
@@ -16,6 +18,7 @@ const Profile = () => {
         shadow={false}
         className="relative max-w-7xl mx-2 lg:mx-auto min-h-[calc(100vh-429px)]  bg-gradient-to-r from-[#f6d5f7]  to-[#fbe9d7] mt-3 flex justify-center items-center overflow-hidden text-center"
       >
+        
         <CardHeader
           floated={false}
           shadow={false}
@@ -70,6 +73,9 @@ const Profile = () => {
   const { displayName, email, photoURL } = user;
   return (
     <div>
+      <Helmet>
+        <title>EverGreen | My Profile</title>
+      </Helmet>
       <Card
         shadow={false}
         className="relative max-w-7xl mx-2 lg:mx-auto min-h-[calc(100vh-429px)] bg-gray-200 mt-3 flex justify-center items-center overflow-hidden text-center"
@@ -80,16 +86,26 @@ const Profile = () => {
           color="transparent"
           className="absolute inset-0 m-0 h-full w-full rounded-none bg-gradient-to-r from-[#f6d5f7]  to-[#fbe9d7] bg-cover bg-center"
         >
-          {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" /> */}
+          
         </CardHeader>
         <CardBody className="relative py-14 px-6 md:px-12">
-          <Avatar
+          {
+            photoURL?<Avatar
             size="xl"
             variant="circular"
             alt={displayName}
             className="border-2 border-white"
             src={photoURL}
           />
+          :
+          <Avatar
+            size="xl"
+            variant="circular"
+            alt={displayName}
+            className="border-2 border-white"
+            src={userImg}
+          />
+          }
           <Typography
             
             color="black"
@@ -97,9 +113,11 @@ const Profile = () => {
           >
             Name: {displayName}
           </Typography>
-          <Typography color="black" className="mb-4 text-md md:text-base lg:text-xl font-semibold leading-[1.5]">
+          {
+            email && <Typography color="black" className="mb-4 text-md md:text-base lg:text-xl font-semibold leading-[1.5]">
             Email: {email}
           </Typography>
+          }
         </CardBody>
       </Card>
     </div>

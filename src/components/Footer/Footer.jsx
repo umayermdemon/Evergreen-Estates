@@ -19,17 +19,17 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <div className="mt-4 pt-4 w-full bg-[#183658E6]">
+    <div className="mt-2 pt-4 w-full bg-gradient-to-r from-[#d8ded6] to-[#e8bdf9]">
       <footer className="relative w-full">
-        <div className="mx-auto w-full max-w-7xl px-8">
+        <div className="mx-auto w-full max-w-7xl ">
           <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
             <div className="flex flex-col">
-              <Typography variant="h3" className="mb-6 text-white font-rubik">
+              <Typography variant="h3" className="mb-6 text-[#0B2B4F] font-rubik">
                 Ever<span className="text-[#5BA600]">Green</span>
               </Typography>
               <Typography
                 variant="h6"
-                className="mb-4 text-white text-justify font-rubik"
+                className="mb-4 text-[#0B2B4F] text-justify font-rubik"
               >
                 Find Your Ideal Escape: Browse through our diverse range of
                 luxury accommodations, from serene beach resorts to vibrant city
@@ -56,7 +56,7 @@ const Footer = () => {
                   <Typography
                     variant="small"
                     color="blue-gray"
-                    className="mb-3 font-bold text-lg  text-white"
+                    className="mb-3 font-bold text-lg  text-[#0B2B4F]"
                   >
                     {title}
                   </Typography>
@@ -66,7 +66,7 @@ const Footer = () => {
                         as="a"
                         href="#"
                         color="gray"
-                        className="py-1.5 font-normal text-white transition-colors hover:text-[#5BA600]"
+                        className="py-1.5 font-normal text-[#0B2B4F] transition-colors hover:text-[#5BA600]"
                       >
                         {link}
                       </Typography>
@@ -79,7 +79,7 @@ const Footer = () => {
           <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
             <Typography
               variant="small"
-              className="mb-4 text-center font-normal text-white font-rubik md:mb-0"
+              className="mb-4 text-center font-normal text-[#0B2B4F] font-rubik md:mb-0"
             >
               &copy; {currentYear}{" "}
               <a href="https://material-tailwind.com/">EverGreen</a>. All Rights
@@ -92,7 +92,7 @@ const Footer = () => {
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
-                  className="h-5 w-5 text-white"
+                  className="h-5 w-5 text-[#0B2B4F]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -110,7 +110,7 @@ const Footer = () => {
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
-                  className="h-5 w-5 text-white"
+                  className="h-5 w-5 text-[#0B2B4F]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -129,7 +129,7 @@ const Footer = () => {
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
-                  className="h-5 w-5 text-white"
+                  className="h-5 w-5 text-[#0B2B4F]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -143,7 +143,7 @@ const Footer = () => {
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
-                  className="h-5 w-5 text-white"
+                  className="h-5 w-5 text-[#0B2B4F]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -161,7 +161,7 @@ const Footer = () => {
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
-                  className="h-5 w-5 text-white"
+                  className="h-5 w-5 text-[#0B2B4F]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"

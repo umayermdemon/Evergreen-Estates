@@ -1,17 +1,25 @@
-import {  Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { setEstates } from "../../Utils/localStorage";
+import { toast } from "react-toastify";
 
 const DetailsEstate = () => {
-  const [details, setDetails]=useState()
-  const {id}=useParams()
-  const estates=useLoaderData();
+  const [details, setDetails] = useState();
+  const { id } = useParams();
+  const currentId=parseInt(id)
+  const estates = useLoaderData();
 
-  useEffect(()=>{
-    const findEstate=estates.find(estate=>estate.id===+id);
-    setDetails(findEstate)
-  },[estates, id])
+  useEffect(() => {
+    const findEstate = estates.find((estate) => estate.id === currentId);
+    setDetails(findEstate);
+  }, [estates, currentId]);
 
   const {
     image,
@@ -23,13 +31,21 @@ const DetailsEstate = () => {
     bedrooms,
     location,
     area,
-    facilities
+    facilities,
   } = details || {};
-  
+
+  const handleBookEstate=()=>{
+    setEstates(currentId)
+    toast.success('Congratulations! You booked the estate successfully')
+  }
+
   return (
     <div>
-     
-     <Card className=" min-h-[calc(100vh-425px)]  max-w-6xl mx-auto flex-col lg:flex-row  mt-2">
+      <Helmet>
+        <title>EverGreen | Details</title>
+      </Helmet>
+
+      <Card className=" min-h-[calc(100vh-413px)]  max-w-6xl mx-auto flex-col lg:flex-row  mt-1">
         <CardHeader
           shadow={false}
           floated={false}
@@ -42,18 +58,31 @@ const DetailsEstate = () => {
           />
         </CardHeader>
         <CardBody>
-          <Typography variant="h6" color="gray" className="mb-4 uppercase font-rubik">
+          <Typography
+            variant="h6"
+            color="gray"
+            className=" uppercase font-rubik"
+          >
             {segment_name}
           </Typography>
-          <Typography variant="h4" color="blue-gray" className="mb-2 font-rubik">
-          {estate_title}
+          <Typography
+            variant="h4"
+            color="blue-gray"
+            className="mb-1 font-rubik"
+          >
+            {estate_title}
           </Typography>
-          <Typography color="gray" className="mb-2 font-rubik font-normal">
+          <Typography color="gray" className="mb-1 font-rubik font-normal">
             {description}
           </Typography>
 
           <div className="flex flex-row justify-between font-rubik">
-            <h2 className="text-black"><span className="font-semibold text-lg text-[#30416D]">Rent:</span> {price}</h2>
+            <h2 className="text-black">
+              <span className="font-semibold text-lg text-[#30416D]">
+                Rent:
+              </span>{" "}
+              {price}
+            </h2>
             <Typography
               color="blue-gray"
               className="flex items-center gap-1.5 font-normal font-rubik"
@@ -74,26 +103,48 @@ const DetailsEstate = () => {
             </Typography>
           </div>
 
+         
+
+          <div className=" mt-2 ">
           <div className="flex flex-row gap-4 mt-2 items-center">
-            <p className="text-xl font-bold font-rubik text-[#30416D]">Facilities:</p>
+            <p className="text-xl font-bold font-rubik text-[#30416D]">
+              Facilities:
+            </p>
             <h1 className="flex gap-2 md:gap-4 lg:gap-4 text-[#23BE0A] font-rubik">
-              {
-                facilities?.map((item, idx)=><p key={idx}>{item}</p>)
-              }
+              {facilities?.map((item, idx) => (
+                <p key={idx}>{item}</p>
+              ))}
             </h1>
           </div>
-
-          <div className="flex flex-row justify-between mt-4 items-center">
-            <p className="text-black"><span className="font-semibold text-lg text-[#30416D] font-rubik">Area:</span> {area}</p>
-            <p className="text-black"><span className="font-semibold text-lg text-[#30416D] font-rubik">Bedrooms:</span> {bedrooms}</p>
+            <p className="text-black">
+              <span className="font-semibold text-lg text-[#30416D] font-rubik">
+                Area:
+              </span>{" "}
+              {area}
+            </p>
+            <p className="text-black">
+              <span className="font-semibold text-lg text-[#30416D] font-rubik">
+                Bedrooms:
+              </span>{" "}
+              {bedrooms}
+            </p>
+            <p className="text-black">
+              <span className="font-semibold text-lg text-[#30416D] font-rubik">
+                Location:
+              </span>{" "}
+              {location}
+            </p>
           </div>
-          <div className="text-center mt-4">
-            <p className="text-black"><span className="font-semibold text-lg text-[#30416D] font-rubik">Location:</span> {location}</p>
+         
+            <div className="text-center mt-3 flex mx-auto">
+              <button onClick={handleBookEstate} className=" py-2 px-4 text-white rounded-lg  bg-gradient-to-r from-[#269064] to-[#30416D] ... flex mx-auto">
+                Book It
+              </button>
           </div>
         </CardBody>
       </Card>
-     </div>
+    </div>
   );
-}
+};
 
 export default DetailsEstate;

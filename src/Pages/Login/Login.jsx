@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signInUser,signWithGoogle,signWithGithub } = useContext(AuthContext);
@@ -58,6 +59,9 @@ const Login = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>EverGreen | Login</title>
+      </Helmet>
       <Card
         color="transparent"
         shadow={false}

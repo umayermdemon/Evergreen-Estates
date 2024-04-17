@@ -4,13 +4,17 @@ import {
   Textarea,
   Typography,
 } from "@material-tailwind/react";
-import Leaflet from "../Leaflet/Leaflet";
 import { IoLocation, IoMail} from "react-icons/io5";
 import { FaPhoneVolume } from "react-icons/fa";
 import "animate.css";
+import Leaflet from "../../components/Leaflet/Leaflet";
+import { Helmet } from "react-helmet-async";
 const Contact = () => {
   return (
     <div>
+      <Helmet>
+        <title>EverGreen | Contact</title>
+      </Helmet>
       <div className="bg-gradient-to-r from-[#269064] to-[#30416D] ... text-center p-12 space-y-4">
         <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-rubik font-bold animate__animated animate__bounce">
           Contact
@@ -30,7 +34,7 @@ const Contact = () => {
           Find out how to find us from your current location
         </p>
         <div className="mx-2">
-          <Leaflet />
+         <Leaflet/>
         </div>
 
         <div className="py-12">

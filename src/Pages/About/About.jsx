@@ -1,8 +1,13 @@
-import 'animate.css';
+import { Helmet } from "react-helmet-async";
+
 
 const About = () => {
   return (
     <div>
+      <div>
+      <Helmet>
+        <title>EverGreen | About</title>
+      </Helmet>
       <div className="bg-gradient-to-r from-[#269064] to-[#30416D] ... text-center p-12 space-y-4">
         <h2 className="text-white text-5xl font-rubik font-bold animate__animated animate__bounce ">About</h2>
         <h4 className="font-rubik font-semibold text-black">
@@ -47,6 +52,7 @@ const About = () => {
           <p className="text-justify font-rubik text-gray-600 text-base w-[350px] md:w-[600px] lg:w-[700px] mx-auto">As the owner of a dynamic real estate company, you epitomize innovation, integrity, and client-centric service. Your astute leadership guides a team committed to excellence, offering unparalleled expertise in navigating the ever-evolving real estate landscape. With a passion for connecting people with their ideal properties, you create  experiences that transcend mere transactions. Beyond business, your dedication to community enrichment and philanthropy reflects a deeper commitment to societal well-being. Your unwavering drive, coupled with a genuine desire to exceed expectations, establishes you as a trusted authority and valued partner in the realm of real estate.</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
