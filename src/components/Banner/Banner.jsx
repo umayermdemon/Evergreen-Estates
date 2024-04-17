@@ -1,23 +1,23 @@
-import {  Button, Carousel, Typography } from "@material-tailwind/react";
-// import { Link } from "react-router-dom";
-import { HashLink as Link } from "react-router-hash-link";
+import {  Carousel, Typography } from "@material-tailwind/react";
+
 
 const Banner = () => {
   return (
     <div>
       <Carousel transition={{ duration: 1.5}}>
-      <div className="relative h-full w-full">
+      <div  className="relative h-full w-full">
         <img
           src="https://i.ibb.co/R7N4BSR/beach-front.jpg"
           alt="image 1"
           className=" w-full h-[250px] md:h-[300px] lg:h-[835px] object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-3/4 text-center md:w-2/4">
+        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75" >
+          <div className="w-3/4 text-center md:w-2/4" data-aos="zoom-out" data-aos-duration='3000'>
             <Typography
               variant="h1"
               color="white"
               className="mb-1 md:mb-3 lg:mb-4 text-sm md:text-base lg:text-xl"
+              
             >
               Good Service is our passion
             </Typography>
@@ -35,14 +35,7 @@ const Banner = () => {
             >
               Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
-            <div className="flex justify-center gap-2 ">
-              <Button size="lg" color="white" className="hidden lg:block">
-                Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -75,14 +68,7 @@ const Banner = () => {
             >
               Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
-            <div className="flex justify-center gap-2">
-              <Button size="lg" color="white">
-                Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -115,15 +101,7 @@ const Banner = () => {
             >
               Indulge in Luxury: Book Your Dream Stay Today! Explore our exquisite hotels for a memorable experience like no other. Book now!
             </Typography>
-            <div className="flex justify-center gap-2">
-              <Link to='#estates'>
-              <Button size="lg" color="white">
-                Explore
-              </Button></Link>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
-            </div>
+            
           </div>
         </div>
       </div>

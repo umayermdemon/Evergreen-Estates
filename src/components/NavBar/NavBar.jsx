@@ -129,9 +129,19 @@ function ProfileMenu() {
                 fill="#90A4AE"
               />
             </svg>
-            <Typography variant="small" className="font-medium">
+            <NavLink
+              to="/help"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#23BE0A] font-medium  pr-2 lg:pr-4"
+                  : "flex text-sm lg:text-base items-center gap-2  text-gray-600 pr-2 lg:pr-4"
+              }
+            >
+              <Typography variant="small" className="font-medium">
               Help
             </Typography>
+            </NavLink>
+            
           </MenuItem>
           <hr className="my-2 border-blue-gray-50" />
           <MenuItem className="flex items-center gap-2 ">

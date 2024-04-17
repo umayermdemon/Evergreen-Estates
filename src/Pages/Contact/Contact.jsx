@@ -27,7 +27,7 @@ const Contact = () => {
         <h2 className="text-lg md:text-xl lg:text-2xl font-rubik font-bold text-gray-500">
           Find Our location
         </h2>
-        <h1 className="text-2xl md:text-3xl lg:text-5xl font-rubik font-bold text-[#30416D]">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl font-rubik font-bold text-[#30416D]" data-aos="fade-left" data-aos-duration='1000'>
           Map & Directions
         </h1>
         <p className="text-base md:text-xl lg:text-2xl font-rubik font-bold text-gray-600">
@@ -38,11 +38,11 @@ const Contact = () => {
         </div>
 
         <div className="py-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik font-bold text-[#30416D]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik font-bold text-[#30416D]" data-aos="fade-left" data-aos-duration='1000'>
             Contact us <br /> live
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-5 ">
-            <div className="flex flex-col md:flex-row lg:flex-col gap-8 md:gap-16 lg:gap-8 col-span-2 pt-8 pb-8 lg:pt-16 justify-center lg:justify-start items-center lg:items-start text-left">
+            <div className="flex flex-col md:flex-row lg:flex-col gap-8 md:gap-16 lg:gap-8 col-span-2 pt-8 pb-8 lg:pt-16 justify-center lg:justify-start items-center lg:items-start text-left" data-aos="fade-right" data-aos-duration='1000'>
               <div className="flex flex-col gap-2">
                 <div className="flex flex-row items-center gap-2 mb-2">
                   <IoLocation className="text-[#30416D] text-2xl" />
@@ -77,16 +77,16 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-span-3 mx-2 md:mx-12" >
-              <Typography variant="h3" color="blue-gray">
+              <Typography variant="h3" color="blue-gray" data-aos="zoom-in" data-aos-duration='1000'>
                 Have a question
               </Typography>
               <div className="mt-4 lg:w-[700px]">
                 <Card shadow={false} className=" bg-gray-100 p-4 lg:p-8">
-                  <Typography variant="h4" color="blue-gray">
+                  <Typography variant="h4" color="blue-gray" data-aos="fade-up" data-aos-duration='1000'>
                     Send Us A email
                   </Typography>
 
-                  <form className="mt-8  ml-6 md:ml-20 lg:ml-2 flex flex-col gap-6 items-center justify-center lg:w-[600px] md:w-[500px] sm:w-96">
+                  <form className="mt-8  ml-6 md:ml-20 lg:ml-2 flex flex-col gap-6 items-center justify-center lg:w-[600px] md:w-[500px] sm:w-96" data-aos="zoom-in" data-aos-duration='1000'>
                     <Input label="Name" variant="standard" required />
 
                     <Input

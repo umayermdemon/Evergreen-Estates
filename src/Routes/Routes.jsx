@@ -11,6 +11,7 @@ import Register from "../Pages/Register/Register";
 import Profile from "../Pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import BookedList from "../Pages/BookedList/BookedList";
+import Help from "../Pages/Help/Help";
 
 
 
@@ -57,6 +58,10 @@ import BookedList from "../Pages/BookedList/BookedList";
         {
           path:'/profile',
           element:<Profile/>
+        },
+        {
+          path:'/help',
+          element:<Help/>
         },
       ]
     }

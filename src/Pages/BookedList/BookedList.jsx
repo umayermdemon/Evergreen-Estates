@@ -35,7 +35,7 @@ const BookedList = () => {
         </h4>
       </div>
      
-      <div className="bg-gray-50 mx-auto mt-1 rounded-lg max-w-7xl min-h-[calc(100vh-539px)]">
+      <div className="bg-gray-50 mx-auto mt-1 rounded-lg max-w-7xl min-h-[calc(100vh-539px)]" >
           {
             displayEstates.map((estate,idx)=><Booked key={idx} estate={estate}></Booked>)
           }

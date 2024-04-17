@@ -9,11 +9,12 @@ import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import { setEstates } from "../../Utils/localStorage";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const DetailsEstate = () => {
   const [details, setDetails] = useState();
   const { id } = useParams();
-  const currentId=parseInt(id)
+  const currentId = parseInt(id);
   const estates = useLoaderData();
 
   useEffect(() => {
@@ -34,10 +35,10 @@ const DetailsEstate = () => {
     facilities,
   } = details || {};
 
-  const handleBookEstate=()=>{
-    setEstates(currentId)
-    toast.success('Congratulations! You booked the estate successfully')
-  }
+  const handleBookEstate = () => {
+    setEstates(currentId);
+    toast.success("Congratulations! You booked the estate successfully");
+  };
 
   return (
     <div>
@@ -103,19 +104,17 @@ const DetailsEstate = () => {
             </Typography>
           </div>
 
-         
-
           <div className=" mt-2 ">
-          <div className="flex flex-row gap-4 mt-2 items-center">
-            <p className="text-xl font-bold font-rubik text-[#30416D]">
-              Facilities:
-            </p>
-            <h1 className="flex gap-2 md:gap-4 lg:gap-4 text-[#23BE0A] font-rubik">
-              {facilities?.map((item, idx) => (
-                <p key={idx}>{item}</p>
-              ))}
-            </h1>
-          </div>
+            <div className="flex flex-row gap-4 mt-2 items-center">
+              <p className="text-xl font-bold font-rubik text-[#30416D]">
+                Facilities:
+              </p>
+              <h1 className="flex gap-2 md:gap-4 lg:gap-4 text-[#23BE0A] font-rubik">
+                {facilities?.map((item, idx) => (
+                  <p key={idx}>{item}</p>
+                ))}
+              </h1>
+            </div>
             <p className="text-black">
               <span className="font-semibold text-lg text-[#30416D] font-rubik">
                 Area:
@@ -135,12 +134,16 @@ const DetailsEstate = () => {
               {location}
             </p>
           </div>
-         
+          <Link to="/bookedList">
             <div className="text-center mt-3 flex mx-auto">
-              <button onClick={handleBookEstate} className=" py-2 px-4 text-white rounded-lg  bg-gradient-to-r from-[#269064] to-[#30416D] ... flex mx-auto">
+              <button
+                onClick={handleBookEstate}
+                className=" py-2 px-4 text-white rounded-lg  bg-gradient-to-r from-[#269064] to-[#30416D] ... flex mx-auto"
+              >
                 Book It
               </button>
-          </div>
+            </div>
+          </Link>
         </CardBody>
       </Card>
     </div>

@@ -24,12 +24,13 @@ const Footer = () => {
         <div className="mx-auto w-full max-w-7xl ">
           <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
             <div className="flex flex-col">
-              <Typography variant="h3" className="mb-6 text-[#0B2B4F] font-rubik">
-                Ever<span className="text-[#5BA600]">Green</span>
+              <Typography variant="h3" className="mb-6 text-[#0B2B4F] font-rubik" data-aos="fade-right" data-aos-duration='1000'>
+                Ever<span className="text-[#5BA600]" >Green</span>
               </Typography>
               <Typography
                 variant="h6"
                 className="mb-4 text-[#0B2B4F] text-justify font-rubik"
+                data-aos="fade-down" data-aos-duration='2000'
               >
                 Find Your Ideal Escape: Browse through our diverse range of
                 luxury accommodations, from serene beach resorts to vibrant city
@@ -44,13 +45,13 @@ const Footer = () => {
                   href="#"
                  
                 >
-                 <Button className="bg-[#5BA600] font-rubik" size="lg">
+                 <Button className="bg-[#5BA600] font-rubik" size="lg" data-aos="fade-right" data-aos-duration='3000'>
                     More
                   </Button>
                 </Typography>
               </div>
             </div>
-            <div className="grid grid-cols-3 justify-between gap-4 md:ml-8 lg:ml-12 mt-4 md:mt-12 lg:mt-12">
+            <div className="grid grid-cols-3 justify-between gap-4 md:ml-8 lg:ml-12 mt-4 md:mt-12 lg:mt-12" data-aos="zoom-in" data-aos-duration='3000'>
               {LINKS.map(({ title, items }) => (
                 <ul key={title}>
                   <Typography
@@ -80,9 +81,10 @@ const Footer = () => {
             <Typography
               variant="small"
               className="mb-4 text-center font-normal text-[#0B2B4F] font-rubik md:mb-0"
+              
             >
               &copy; {currentYear}{" "}
-              <a href="https://material-tailwind.com/">EverGreen</a>. All Rights
+              <a href="/" >EverGreen</a>. All Rights
               Reserved.
             </Typography>
             <div className="flex gap-4 text-blue-gray-900 sm:justify-center">

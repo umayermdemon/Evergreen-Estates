@@ -27,7 +27,7 @@ const Estate = ({ estate }) => {
   } = estate || {};
   return (
     <div>
-      <Card className="w-full flex flex-col  max-w-[26rem] shadow-lg">
+      <Card className="w-full flex flex-col  max-w-[26rem] shadow-lg"  data-aos="zoom-in-up" data-aos-duration='3000'>
         <CardHeader floated={false} color="blue-gray">
           <img src={image} className="h-56 w-full" />
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />

@@ -12,14 +12,14 @@ const AboutSection = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="mb-4 text-center font-rubik ">
-        <h1 className="font-bold text-5xl text-[#0E385D] border-b-2 border-green-200 px-2 hover:px-8 duration-300 py-2 mb-4 inline-block">About Us</h1>
-        <p className="text-[#0E385D] font-medium">
+        <h1 className="font-bold text-5xl text-[#0E385D] border-b-2 border-green-200 px-2 hover:px-8 duration-300 py-2 mb-4 inline-block" data-aos="fade-left" data-aos-duration='1000'>About Us</h1>
+        <p className="text-[#0E385D] font-medium" data-aos="fade-up" data-aos-duration='1000'>
           WELCOME TO OUR Real Estate COMPANY
         </p>
       </div>
       <div className=" flex flex-col lg:flex-row gap-12 pt-4">
         <div className="mx-2 md:mx-4 lg:mx-auto">
-          <img src="https://i.ibb.co/3MhGHQR/modern-city.jpg" alt="" className="rounded-xl" />
+          <img src="https://i.ibb.co/3MhGHQR/modern-city.jpg" alt="" className="rounded-xl" data-aos="zoom-in" data-aos-duration='2000' />
         </div>
         <div className="mx-2 md:mx-4 lg:mx-auto">
           <Timeline>
@@ -31,6 +31,7 @@ const AboutSection = () => {
                   variant="h6"
                   color="blue-gray"
                   className="leading-none font-rubik"
+                  data-aos="fade-left" data-aos-duration='1000'
                 >
                   About Our Company
                 </Typography>
@@ -40,6 +41,8 @@ const AboutSection = () => {
                   variant="small"
                   color="gary"
                   className="font-normal text-gray-600 font-rubik"
+                  data-aos="zoom-out" data-aos-duration='2000'
+                  
                 >
                   Learn about our company mission, values, and commitment to excellence in real estate. Discover how we strive to provide exceptional service and personalized solutions to meet your property needs.
                 </Typography>
@@ -53,6 +56,7 @@ const AboutSection = () => {
                   variant="h6"
                   color="blue-gray"
                   className="leading-none font-rubik"
+                  data-aos="fade-left" data-aos-duration='1000'
                 >
                   Terms & Conditions
                 </Typography>
@@ -62,6 +66,7 @@ const AboutSection = () => {
                   variant="small"
                   color="gary"
                   className="font-normal text-gray-600 font-rubik"
+                  data-aos="zoom-out" data-aos-duration='2000'
                 >
                   Familiarize yourself with our terms and conditions to ensure a smooth and transparent transaction process. From legal requirements to payment procedures, we outline the guidelines for engaging with our real estate services.
                 </Typography>
@@ -74,6 +79,7 @@ const AboutSection = () => {
                   variant="h6"
                   color="blue-gray"
                   className="leading-none font-rubik"
+                  data-aos="fade-left" data-aos-duration='1000'
                 >
                   Our Specialty
                 </Typography>
@@ -83,6 +89,7 @@ const AboutSection = () => {
                   variant="small"
                   color="gary"
                   className="font-normal text-gray-600 font-rubik"
+                  data-aos="zoom-out" data-aos-duration='2000'
                 >
                   Explore our areas of expertise and discover why clients choose us for their real estate needs. From luxury properties to investment opportunities, we specialize in matching clients with properties that exceed their expectations. Experience the difference with our personalized approach to real estate.
                 </Typography>
