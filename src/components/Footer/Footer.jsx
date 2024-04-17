@@ -46,7 +46,7 @@ const Footer = () => {
                  
                 >
                  <Button className="bg-[#5BA600] font-rubik" size="lg" data-aos="fade-right" data-aos-duration='3000'>
-                    More
+                    Top
                   </Button>
                 </Typography>
               </div>
