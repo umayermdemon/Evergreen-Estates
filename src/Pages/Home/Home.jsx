@@ -13,8 +13,9 @@ const Home = () => {
       </Helmet>
       <Banner/>
       <Estates/>
-      <AboutSection/>
       <Clients/>
+      <AboutSection/>
+      
     </div>
   );
 };
