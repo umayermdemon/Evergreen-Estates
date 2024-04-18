@@ -78,7 +78,7 @@ const Profile = () => {
       </Helmet>
       <Card
         shadow={false}
-        className="relative max-w-7xl mx-2 lg:mx-auto min-h-[calc(100vh-429px)] bg-gray-200 mt-3 flex justify-center items-center overflow-hidden text-center"
+        className="relative max-w-7xl mx-2 lg:mx-auto min-h-[calc(100vh-421px)] bg-gray-200 mt-3 flex justify-center items-center overflow-hidden text-center"
       >
         <CardHeader
           floated={false}
@@ -93,7 +93,7 @@ const Profile = () => {
             photoURL?<Avatar
             size="xl"
             variant="circular"
-            alt={displayName}
+            alt="Profile Image"
             className="border-2 border-white"
             src={photoURL}
           />

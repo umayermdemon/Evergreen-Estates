@@ -36,83 +36,83 @@ const Help = () => {
         Help center!
         </h2>
       </div>
-      <div className="max-w-3xl mx-auto py-4">
+      <div className="max-w-xl md:max-w-2xl lg:max-w-3xl mx-2 md:mx-auto lg:mx-auto py-4">
         <h1 className="text-center font-rubik font-extrabold  text-3xl">FAQs</h1>
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(1)}>How do I search for properties on EverGreen?</AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionHeader  className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(1)}>How do I search for properties on EverGreen?</AccordionHeader>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         To search for properties, navigate to the "Listings" page and utilize our search filters to find properties based on your preferences such as location, price range, property type, and more.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(2)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(2)}>
         Can I save my favorite properties for later viewing?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         Yes, you can! Simply create an account on EverGreen and log in to save properties to your favorites list for easy access later.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(3)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(3)}>
         How do I schedule a viewing for a property?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         Once you've found a property you're interested in, contact the listing agent directly through the property details page to schedule a viewing at a convenient time for you.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(4)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(4)}>
         What financing options are available for purchasing a property?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         EverGreen works with various lenders to provide financing options such as mortgages and loans. Contact us for more information on financing options tailored to your needs.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(5)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(5)}>
         Are there any upcoming open houses I can attend?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         Check our "Events" page regularly for information on upcoming open houses and other real estate events in your area.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 6} icon={<Icon id={6} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(6)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(6)}>
         How do I list my property for sale or rent on EverGreen?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         If you're a property owner or agent, you can list your property on EverGreen by creating an account and following the simple steps to add your property details and images.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 7} icon={<Icon id={7} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(7)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(7)}>
         What information should I provide when contacting support for assistance?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         When contacting EverGreen support, please provide your name, email address, a detailed description of your issue or inquiry, and any relevant screenshots or documentation to assist us in resolving your query promptly.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 8} icon={<Icon id={8} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(8)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(8)}>
         Is there a fee for using EverGreen's services?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         EverGreen offers both free and premium services. Basic features such as property search and listing are free to use, while premium services may incur fees. Contact us for more information on premium services.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 9} icon={<Icon id={9} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(9)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(9)}>
         How can I update my account information on EverGreen?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         Log in to your EverGreen account and navigate to the "Update Profile" section, where you can update your personal information, password, and communication preferences.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 10} icon={<Icon id={10} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(10)}>
+        <AccordionHeader className="text-base md:text-xl lg:text-xl" onClick= {() => handleOpen(10)}>
         What sets EverGreen apart from other real estate websites?
         </AccordionHeader>
-        <AccordionBody className='text-lg'>
+        <AccordionBody className='text-sm md:text-lg  lg:text-lg'>
         EverGreen is committed to providing a seamless and personalized real estate experience. Our user-friendly interface, comprehensive property listings, dedicated support team, and innovative features make us the preferred choice for buyers, sellers, and renters alike.
         </AccordionBody>
       </Accordion>

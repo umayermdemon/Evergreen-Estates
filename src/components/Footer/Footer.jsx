@@ -23,14 +23,14 @@ const Footer = () => {
       <footer className="relative w-full">
         <div className="mx-auto w-full max-w-7xl ">
           <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-            <div className="flex flex-col">
-              <Typography variant="h3" className="mb-6 text-[#0B2B4F] font-rubik" data-aos="fade-right" data-aos-duration='1000'>
+            <div className="flex flex-col mx-2 lg:mx-0">
+              <Typography variant="h3" className="mb-6 text-[#0B2B4F] font-rubik" >
                 Ever<span className="text-[#5BA600]" >Green</span>
               </Typography>
               <Typography
                 variant="h6"
                 className="mb-4 text-[#0B2B4F] text-justify font-rubik"
-                data-aos="fade-down" data-aos-duration='2000'
+               
               >
                 Find Your Ideal Escape: Browse through our diverse range of
                 luxury accommodations, from serene beach resorts to vibrant city
@@ -45,13 +45,13 @@ const Footer = () => {
                   href="#"
                  
                 >
-                 <Button className="bg-[#5BA600] font-rubik" size="lg" data-aos="fade-right" data-aos-duration='3000'>
+                 <Button className="bg-[#5BA600] font-rubik" size="lg" >
                     Top
                   </Button>
                 </Typography>
               </div>
             </div>
-            <div className="grid grid-cols-3 justify-between gap-4 md:ml-8 lg:ml-12 mt-4 md:mt-12 lg:mt-12" data-aos="zoom-in" data-aos-duration='3000'>
+            <div className="grid grid-cols-3 ml-2 justify-between gap-4 md:ml-8 lg:ml-12 mt-4 md:mt-12 lg:mt-12" >
               {LINKS.map(({ title, items }) => (
                 <ul key={title}>
                   <Typography

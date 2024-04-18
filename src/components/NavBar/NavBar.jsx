@@ -10,7 +10,6 @@ import {
   MenuList,
   Avatar,
   Tooltip,
-  Spinner,
 } from "@material-tailwind/react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import React, { useContext } from "react";
@@ -42,7 +41,7 @@ function ProfileMenu() {
             <Avatar
               variant="circular"
               size="sm"
-              alt={displayName}
+              alt="Profile Image"
               className="cursor-pointer"
               src={photoURL}
             />
@@ -50,7 +49,7 @@ function ProfileMenu() {
             <Avatar
               variant="circular"
               size="sm"
-              alt={displayName}
+              alt="Profile Image"
               className="cursor-pointer"
               src={userImg}
             />
@@ -174,10 +173,8 @@ function ProfileMenu() {
 }
 
 function NavList() {
-  const { user, loader } = useContext(AuthContext);
-  if (loader) {
-    return <Spinner />;
-  }
+  const { user } = useContext(AuthContext);
+ 
 
   return (
     <div className="flex  items-center  gap-96">
@@ -264,7 +261,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className=" w-full z-50 p-2 bg-gradient-to-r from-[#d8ded6] to-[#e8bdf9]">
+    <div className=" w-full sticky top-0 z-50 p-2  bg-gradient-to-r from-[#d8ded6] to-[#e8bdf9]">
       <Navbar className=" mx-auto max-w-7xl  border-none p-2 bg-gradient-to-r from-[#d8ded6] to-[#e8bdf9]  lg:pl-4">
         <div className="relative mx-auto flex items-center justify-between text-[#0B2B4F]">
           <IconButton

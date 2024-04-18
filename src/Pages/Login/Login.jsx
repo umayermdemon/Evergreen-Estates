@@ -49,11 +49,12 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Login success!!");
         navigate(location?.state ? location.state : "/");
+        
       })
       .catch((error) => {
         console.error(error);
-
         toast.warn("Please provide valid email & password");
       });
   };
@@ -65,7 +66,7 @@ const Login = () => {
       <Card
         color="transparent"
         shadow={false}
-        className="max-w-7xl mx-auto min-h-[calc(100vh-429px)] bg-gray-200 mt-3 flex justify-center items-center"
+        className="max-w-7xl mx-auto min-h-[calc(100vh-421px)] bg-gray-200 mt-3 flex justify-center items-center"
       >
         <Typography className="text-xl md:text-2xl lg:text-3xl font-rubik font-bold text-[#30416D]">
           Login

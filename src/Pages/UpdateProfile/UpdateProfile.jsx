@@ -10,30 +10,30 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Context/AuthProvider";
 import userImg from "/user.png";
-import { useForm } from "react-hook-form";
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/firebase.config";
+
+
 
 const UpdateProfile = () => {
-  const { user, loader,updateProfile} = useContext(AuthContext);
- 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = async (data) => {
-    try {
-      await updateProfile({
-        displayName: data.displayName,
-        photoURL: data.photoUrl
-      });
-      // Update successful
-      console.log("Profile updated successfully!");
-    } catch (error) {
-      // Handle error
-      console.error("Error updating profile:", error);
-    }
-  };
-  console.log(errors);
+  const { user, loader} = useContext(AuthContext);
+  const handleUpdateProfile = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const photoUrl = form.get("photoUrl");
+    console.log(name, photoUrl);
+    updateProfile(auth.currentUser,{
+      displayName:name, photoURL:photoUrl
+    })
+    .then(
+        location.reload()
+    )
+    .catch(error=>{
+      console.error(error)
+    })
+  }
+  
 
   if (loader) {
     return (
@@ -95,7 +95,7 @@ const UpdateProfile = () => {
       <Card
         color="transparent"
         shadow={false}
-        className="max-w-7xl mx-auto min-h-[calc(100vh-425px)] bg-gray-200 mt-2 flex justify-center items-center"
+        className="max-w-7xl mx-auto min-h-[calc(100vh-417px)] bg-gray-200 mt-2 flex justify-center items-center"
       >
         <Typography
           color="black"
@@ -116,7 +116,7 @@ const UpdateProfile = () => {
               <Avatar
                 size="xl"
                 variant="circular"
-                alt={displayName}
+                alt="Profile Image"
                 className="border-2 border-white"
                 src={photoURL}
               />
@@ -141,7 +141,7 @@ const UpdateProfile = () => {
         </div>
 
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleUpdateProfile}
           className="mt-2 mb-2 w-80 max-w-screen-lg sm:w-96"
         >
           <div className="mb-1 flex flex-col gap-6">
@@ -149,14 +149,16 @@ const UpdateProfile = () => {
               size="lg"
               variant="outlined"
               label="Name"
-              {...register("displayName")}
+              name="name"
+              // value={displayName}
             />
 
             <Input
               size="lg"
               label="Photo Url"
               variant="outlined"
-              {...register("photoUrl")}
+              name="photoUrl"
+              // value={photoURL}
             />
           </div>
 

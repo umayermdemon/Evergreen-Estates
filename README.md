@@ -25,5 +25,4 @@ Evergreen is more than just a real estate website—it's a community committed t
 - [AOS Package](https://michalsnik.github.io/aos/)
 - [Animate.css](https://animate.style/)
 - [React-leaflet](https://react-leaflet.js.org/)
-- [Swiper-slider](https://swiperjs.com/)
 

@@ -75,7 +75,7 @@ const Register = () => {
         color="transparent"
         shadow={false}
         
-        className="max-w-7xl mx-auto min-h-[calc(100vh-425px)] px-24 bg-gradient-to-r from-[#f6d5f7]  to-[#fbe9d7]  mt-2 flex justify-center items-center"
+        className="max-w-7xl mx-auto min-h-[calc(100vh-417px)] px-24 bg-gradient-to-r from-[#f6d5f7]  to-[#fbe9d7]  mt-2 flex justify-center items-center"
       >
         <h2 className="text-xl md:text-2xl lg:text-3xl font-rubik font-bold text-[#30416D]">
           Register
