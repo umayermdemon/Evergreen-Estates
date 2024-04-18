@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 const getEstates=()=>{
   const getLocalStorage=localStorage.getItem('estate-booked');
@@ -13,6 +14,10 @@ const setEstates= id=>{
   if(!isExist){
     setLocalStorage.push(id);
     localStorage.setItem('estate-booked', JSON.stringify(setLocalStorage))
+    toast.success("Congratulations! You booked the estate successfully");
+  }
+  else{
+    toast.error('You have already added')
   }
 }
 

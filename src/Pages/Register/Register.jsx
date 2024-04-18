@@ -58,7 +58,7 @@ const Register = () => {
       })
       .catch((error) => {
         console.error(error);
-        toast.warn("You are already registered. Please Login")
+        toast.error("You are already registered. Please Login")
       });
 
       

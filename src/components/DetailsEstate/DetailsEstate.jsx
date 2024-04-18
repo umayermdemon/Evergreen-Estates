@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import { setEstates } from "../../Utils/localStorage";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 const DetailsEstate = () => {
@@ -37,7 +37,7 @@ const DetailsEstate = () => {
 
   const handleBookEstate = () => {
     setEstates(currentId);
-    toast.success("Congratulations! You booked the estate successfully");
+    
   };
 
   return (
@@ -134,7 +134,7 @@ const DetailsEstate = () => {
               {location}
             </p>
           </div>
-          <Link to="/bookedList">
+          <Link>
             <div className="text-center mt-3 flex mx-auto">
               <button
                 onClick={handleBookEstate}

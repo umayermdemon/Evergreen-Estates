@@ -23,7 +23,9 @@ const Login = () => {
     .then((result) => {
       console.log(result.user);
       navigate(location?.state ? location.state : "/");
-      toast.success("Login successful!")
+      toast.success("Login successful!",{
+        position: "top-left"
+      })
     })
     .catch(error=>{
       console.error(error)
@@ -34,7 +36,9 @@ const Login = () => {
     .then((result) => {
       console.log(result.user);
       navigate(location?.state ? location.state : "/");
-      toast.success("Login successful!")
+      toast.success("Login successful!",{
+        position: "top-left"
+      })
     })
     .catch(error=>{
       console.error(error)
@@ -52,11 +56,13 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate(location?.state ? location.state : "/");
-         toast.success("Login successful!")
+        toast.success("Login successful!",{
+          position: "top-left"
+        })
       })
       .catch((error) => {
         console.error(error);
-        toast.warn("Please provide valid email & password");
+        toast.error("Please provide valid email & password");
       });
   };
   return (
